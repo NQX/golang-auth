@@ -1,0 +1,13 @@
+docker pull postgres:latest
+
+docker run --name pgsql -p 5432:5432 -e POSTGRES_PASSWORD=julchenSQL -d postgres:latest
+
+docker exec -it pgsql bash
+
+psql -h localhost -p 5432 -U postgres
+
+
+# pgadmin
+
+docker pull dpage/pgadmin4
+docker run --rm -p 80:80 -e 'PGADMIN_DEFAULT_EMAIL=user@domain.local' -e 'PGADMIN_DEFAULT_PASSWORD=pass' --name dev-pgadmin -d dpage/pgadmin4
