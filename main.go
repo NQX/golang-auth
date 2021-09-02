@@ -1,7 +1,7 @@
 package main
 
 import ("github.com/gin-gonic/gin"
-		"github.com/golang-auth/routes"
+		"golang-auth/routes"
 )
 
 func main() {
